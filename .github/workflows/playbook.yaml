@@ -1,0 +1,8 @@
+---
+- name: Copy File Locally
+  hosts: localhost
+  tasks:
+    - name: Copy file
+      ansible.builtin.copy:
+        src: "{{ lookup('env', 'SOURCE_FOLDER') }}/your_file.txt"
+        dest: "{{ lookup('env', 'DESTINATION_FOLDER') }}/your_file.txt"
