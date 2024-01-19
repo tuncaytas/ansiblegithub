@@ -16,7 +16,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: 3.x  # Choose a Python version compatible with Ansible
+        python-version: 3.7  # Choose a Python version compatible with Ansible
 
     - name: Install Ansible
       run: |
@@ -26,5 +26,5 @@ jobs:
       run: |
         ansible-playbook -i localhost, -c local ansible/copy-file.yml
       env:
-        SOURCE_FOLDER: "path/to/source"
-        DESTINATION_FOLDER: "path/to/destination"
+        SOURCE_FOLDER: "/Users/admin/expero.zip"
+        DESTINATION_FOLDER: "/Users/admin/expero"
